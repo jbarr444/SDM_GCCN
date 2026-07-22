@@ -214,6 +214,7 @@ def advect_step(z, v, xi, dt):
                 else:
                     C += xi[i] * v[i] * rho_w
                 xi[i] = 0.0
+    # return sedimentation flux, split into cloud water and rain water.
     return C, R
 
 @nb.njit
